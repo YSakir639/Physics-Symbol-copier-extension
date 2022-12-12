@@ -1,0 +1,12 @@
+{
+    "name":"Project 67",
+    "version":"1.0.0",
+    "description":"This is a description",
+    "manifest_version":3,
+    "author":"Yahya",
+    "action":{
+        "default_popup":"index.html",
+        "default_title":"Project 67",
+        "js":"script.js"
+    }
+}
