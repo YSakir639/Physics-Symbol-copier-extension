@@ -1,15 +1,16 @@
 const json = `{
-    "Pi":"π",
-    "Lambda":"𝝀",
-    "Work_Function":"φ",
-    "Gamma":"γ",
-    "Beta":"β",
     "Alfa":"α",
+    "Beta":"β",
+    "Gamma":"γ",
+    "Work_Function":"φ",
+    "Lambda":"𝝀",
+    "Pi":"π",
     "Sigma":"∑",
     "Variance":"σ2"
-}`
+}` 
 
 const symbols = JSON.parse(json)
+
 const keys = Object.keys(symbols)
 const values = Object.values(symbols)
 const len = Object.keys(symbols).length
@@ -39,8 +40,8 @@ for(i=0; i < len; i++) {
     title[i].innerText = keys[i];
     button[i].innerText = "copy";
 
-    div[i].append(h1[i]);
     div[i].append(title[i]);
+    div[i].append(h1[i]);
     div[i].append(button[i]);
 
     h1[i].setAttribute("class","main"); 
@@ -54,12 +55,22 @@ for(i=0; i < len; i++) {
 for(i=0; i < len; i++) {
 
     document.querySelector(`.${button_id[i]}`).addEventListener("click",function(e){
-        // console.log(e.path[1].childNodes[0].innerText)
-        copy = e.path[1].childNodes[0].innerText
+        // console.log(e.path[1].childNodes[1].innerText)
+        copy = e.path[1].childNodes[1].innerText
         navigator.clipboard.writeText(copy);
         // console.log(e.target.getAttribute('class'))
         elm = document.querySelector(`.${e.target.getAttribute('class')}`)
-        elm.style.backgroundColor="#1aff1a";
+        
+        for(i=0; i < len; i++) {
+            lm = document.querySelectorAll("button")[i]
+            lm.innerText = 'copy'
+            lm.style.backgroundColor="white";
+            lm.style.color = 'black';
+        }
+
+
+        elm.style.backgroundColor=" #00308F";
+        elm.style.color = 'white';
         elm.innerText = 'copied!';
 
         
