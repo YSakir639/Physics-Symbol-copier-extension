@@ -1,1 +1,1 @@
-# Physics Symbol copier extension
+# Physics Wallet
