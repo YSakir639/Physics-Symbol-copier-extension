@@ -1,12 +1,12 @@
 {
-    "name":"Project 67",
+    "name":"Physics Wallet",
     "version":"1.0.0",
-    "description":"This is a description",
+    "description":"Copy physics symbols from the tip of your browser",
     "manifest_version":3,
-    "author":"Yahya",
+    "author":"Yahya Sakir",
     "action":{
         "default_popup":"index.html",
-        "default_title":"Project 67",
+        "default_title":"Physics Wallet",
         "js":"script.js"
     }
 }
